@@ -1,0 +1,52 @@
+<mat-card class=" md-primary">
+  <mat-grid-list cols="4" rowHeight="40px">
+      <!-- id -->
+    <mat-grid-tile [colspan]=4 [rowspan]=1>
+      <div>
+        <span class="mat-h2">Рейс №{{flight.id}}</span>
+      </div>
+    </mat-grid-tile>
+        <!-- dateTime -->
+    <mat-grid-tile [colspan]=1 [rowspan]=3>
+      <div class="row">
+        <span class="mat-h1">{{flight.time}}</span>
+        <span class="mat-h3">{{flight.date}}</span>
+      </div>
+    </mat-grid-tile>
+        <!-- icon -->
+    <mat-grid-tile row [colspan]=2 [rowspan]=1>
+        <i class="fa fa-plane" aria-hidden="true"></i>
+    </mat-grid-tile>
+        <!-- params -->
+    <mat-grid-tile [colspan]=1 [rowspan]=3>
+      <div class="rightBlock">
+        <span>Посмотреть данные о</span>
+        <ul>
+            <li>
+                <a (click)="getInfoPlane(flight.planeId)">Самолете</a>  
+            </li>
+            <li>
+                <a (click)="getInfoPilot(flight.pilotId)" >Пилоте</a>
+            </li>
+            <li>
+                <a >Пассажирах</a>
+            </li>
+        </ul>
+       
+      </div>
+    </mat-grid-tile>
+        <!-- line -->
+    <mat-grid-tile row [colspan]=2 [rowspan]=1 >
+        <span col-12 class="line w-100"></span>
+    </mat-grid-tile>
+        <!-- cyties -->
+    <mat-grid-tile row [colspan]=2 [rowspan]=1>
+        <div row class="d-flex w-100">
+          <span class="w-50 mat-h3 d-flex justify-content-start">{{flight.departureCity}}</span>
+          <span class="w-50 mat-h3 d-flex justify-content-end">{{flight.arrivalCity}}</span>
+        </div>
+      </mat-grid-tile>
+
+  </mat-grid-list>
+</mat-card>
+

@@ -1,0 +1,31 @@
+<div  *ngIf="type=='plane'">   
+    <div class="d-flex">
+    <span class="row mat-h1 m-auto"> Информация о самолете</span>
+    </div>
+    <!-- <div class="d-flex justify-content-around"> -->
+    <div>
+    <span class="mat-h2 d-flex">Модель: {{item.model}}</span>
+    <span class="mat-h2 d-flex">Вместимость: {{item.capacity}}</span>
+    </div>
+</div>
+
+<div  *ngIf="type=='pilot'">   
+    <div class="d-flex">
+    <span class="row mat-h1 m-auto"> Информация о пилоте</span>
+    </div>
+    <div>
+    <span class="mat-h2 d-flex">ФИО: {{item.name}}</span>
+    <span class="mat-h2 d-flex">Телефон: {{item.phone}}</span>
+    </div>
+</div>
+
+
+<!-- <mat-grid-list cols="2" rowHeight="40px">
+    <mat-grid-tile [colspan]=2 [rowspan]=1>
+      <span class="row mat-h1 m-auto"> Информация о самолете</span>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=2 [rowspan]=1>
+      <span class="col mat-h2">Модель: {{item.model}}</span>
+      <span class="col mat-h2">Вместимость: {{item.capacity}}</span>
+    </mat-grid-tile>
+  </mat-grid-list>   -->

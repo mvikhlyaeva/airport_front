@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+$fa-font-path: "https://netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+@import "~font-awesome/scss/font-awesome.scss";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

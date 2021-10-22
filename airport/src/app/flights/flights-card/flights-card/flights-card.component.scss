@@ -1,0 +1,22 @@
+.mat-typography{
+    background-color: rgb(43, 42, 42);
+}
+
+.line {
+    margin-top: 15px;
+    height: 7px;
+    //width: 400px;
+    margin-left: -1px;
+    background-color: rgb(43, 42, 42);
+    flex: 1;
+    display: block;
+    border-radius: 15px;
+}
+
+.rightBlock{
+    border-left: rgb(43, 42, 42);
+}
+
+li{
+    text-decoration: none;
+}
