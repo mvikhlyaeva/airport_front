@@ -1,0 +1,51 @@
+<!-- <form #editForm="ngForm"> -->
+   <div>
+      <span class = "mat-h1" *ngIf="!new">Рейс №{{newFlight.id}}</span> 
+    
+    <mat-form-field *ngIf="new">
+        <input matInput placeholder="Номер рейса" [(ngModel)]="newFlight.id" name="n">
+    </mat-form-field>  
+
+    <mat-form-field>
+        <input matInput placeholder="Время" [(ngModel)]="newFlight.time" name="n">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Дата" [(ngModel)]="newFlight.date" name="n">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Откуда" [(ngModel)]="newFlight.departureCity" name="n">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Куда" [(ngModel)]="newFlight.arrivalCity" name="n">
+    </mat-form-field>
+
+    <mat-form-field >
+        <mat-label>Cамолет</mat-label>
+        <mat-select  [(ngModel)]="newFlight.planeId" ngDefaultControl>
+          <mat-option *ngFor="let plane of allPlanes" [value]="plane.id">{{plane.model}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Пилот</mat-label>
+        <mat-select  [(ngModel)]="newFlight.pilotId" ngDefaultControl>
+          <mat-option *ngFor="let pilot of allPilots" [value]="pilot.id">{{pilot.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field >
+        <mat-label>Аэропорт</mat-label>
+        <mat-select  [(ngModel)]="newFlight.airportId" ngDefaultControl>
+          <mat-option *ngFor="let airport of allAirports" [value]="airport.id">{{airport.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="button-row" style="text-align:center;">
+        <button mat-raised-button color="primary" (click)="save()"><i class="fa fa-floppy-o" aria-hidden="true"></i> Сохранить</button>
+        <button mat-raised-button color="warn" (click)="cancel()"><i class="fa fa-ban" aria-hidden="true"></i> Отмена</button>
+      </div>
+ </div>
+<!-- </form> -->

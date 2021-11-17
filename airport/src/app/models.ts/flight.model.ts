@@ -1,5 +1,5 @@
 export class Flight{
-    id!: number;
+    id: number;
     departureTime: string; 
     time: string;
     date: string;

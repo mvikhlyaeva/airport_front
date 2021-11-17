@@ -1,4 +1,4 @@
-import { InjectionToken, NgModule } from '@angular/core';
+import { InjectionToken, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,19 @@ import { PpinfoComponent } from './flights/flights-card/modal/ppinfo/ppinfo.comp
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { Overlay } from '@angular/cdk/overlay';
 import { FlightService } from './services/flight-service/flight.service';
+import { MatIconModule } from '@angular/material/icon';
+import { EditFlyComponent } from './flights/flights-card/modal/edit-fly/edit-fly.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { CommonModule } from '@angular/common';
+import { MatSelectModule } from '@angular/material/select';
+import { AirportsComponent } from './airports/airports.component';
+import { PlanesComponent } from './planes/planes.component';
+import { PilotsComponent } from './pilots/pilots.component';
+import { PlaneCardComponent } from './planes/plane-card/plane-card.component';
+import { PilotCardComponent } from './pilots/pilot-card/pilot-card.component';
+import { AorportcardComponent } from './airports/aorportcard/aorportcard.component'
 
 // import {
 //     MatFormFieldModule,
@@ -32,7 +45,14 @@ import { FlightService } from './services/flight-service/flight.service';
     AppComponent,
     FlightsComponent,
     FlightsCardComponent,
-    PpinfoComponent
+    PpinfoComponent,
+    EditFlyComponent,
+    AirportsComponent,
+    PlanesComponent,
+    PilotsComponent,
+    PlaneCardComponent,
+    PilotCardComponent,
+    AorportcardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +64,14 @@ import { FlightService } from './services/flight-service/flight.service';
     MatGridListModule,
     MatButtonModule,
     FlexLayoutModule,
-    MatDialogModule
-    //MatDialog
+    MatDialogModule,
+    MatIconModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CommonModule,
+    MatSelectModule
+   // NgSelectModule
   ],
   providers: [
     FlightService,
@@ -53,6 +79,7 @@ import { FlightService } from './services/flight-service/flight.service';
     Overlay,
     
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

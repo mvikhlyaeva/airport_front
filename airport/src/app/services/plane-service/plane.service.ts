@@ -13,4 +13,8 @@ export class PlaneService {
   getPlane(planeId: number): Observable<Plane> {
     return this.http.get<Plane>(`api/plane/${planeId}`);          
 }
+
+    getAllPlanes(): Observable<Plane[]> {
+        return this.http.get<Plane[]>(`api/planes`);          
+    }
 }

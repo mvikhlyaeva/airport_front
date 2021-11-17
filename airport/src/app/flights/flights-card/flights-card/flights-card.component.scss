@@ -20,3 +20,10 @@
 li{
     text-decoration: none;
 }
+
+.actions{
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+    padding: 10px;
+}
